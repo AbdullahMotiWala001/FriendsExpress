@@ -7,21 +7,20 @@ const filePath = path.join(__dirname, 'our-data.txt')
 app.set('view engine', 'ejs');
 
 app.get('/', (req, res) => {
-    // res.send('Hello World')
-    // res.setHeader("Content-Type", "text/html");
-    // res.send("<a href='./form'> Go to Form </ a>");
     res.render('home')
 })
 
 
 app.get('/form', (req, res) => {
-    res.setHeader("Content-Type", "text/html");
-    res.send("<form action='/submit' method='POST' ><label>Name <input type='text' name='name' /></label> \n <label> Password <input type ='password' name='pass' /> \n <button type ='submit'>Submit</button></form>");
+    // res.setHeader("Content-Type", "text/html");
+    // res.send("<form action='/submit' method='POST' ><label>Name <input type='text' name='name' /></label> \n <label> Password <input type ='password' name='pass' /> \n <button type ='submit'>Submit</button></form>");
+    res.render('form')
 })
 
 app.post('/submit', (req, res) => {
-    res.setHeader("Content-Type", "text/html");
-    res.send("<h1>Sucessfully Submitted</h1>");
+    // res.setHeader("Content-Type", "text/html");
+    // res.send("<h1>Sucessfully Submitted</h1>");
+    res.render('submit')
     let myData = '';
     req.on('data', (chunk) => {
         myData += chunk;
