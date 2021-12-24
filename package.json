@@ -1,0 +1,15 @@
+{
+  "dependencies": {
+    "express": "^4.17.2"
+  },
+  "name": "friendsexpress",
+  "version": "1.0.0",
+  "description": "it is express based backend for friend-the social app",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Abdullah MotiWala",
+  "license": "ISC"
+}
