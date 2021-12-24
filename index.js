@@ -4,12 +4,13 @@ const port = process.env.PORT || 3000;
 const fs = require('fs');
 const path = require('path');
 const filePath = path.join(__dirname, 'our-data.txt')
-
+app.set('view engine', 'ejs');
 
 app.get('/', (req, res) => {
     // res.send('Hello World')
-    res.setHeader("Content-Type", "text/html");
-    res.send("<a href='./form'> Go to Form </ a>");
+    // res.setHeader("Content-Type", "text/html");
+    // res.send("<a href='./form'> Go to Form </ a>");
+    res.render('home')
 })
 
 
